@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Lịch Sử Giao Dịch</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2>Lịch Sử Giao Dịch</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Thời Gian</th>
+                <th>Loại Thẻ</th>
+                <th>Số Tiền</th>
+                <th>Trạng Thái</th>
+            </tr>
+        </thead>
+        <tbody id="history-list"></tbody>
+    </table>
+
+    <script>
+        async function loadHistory() {
+            let response = await fetch("php/history.php");
+            let data = await response.json();
+            let historyList = document.getElementById("history-list");
+
+            data.forEach(item => {
+                let row = `<tr>
+                    <td>${item.created_at}</td>
+                    <td>${item.card_type}</td>
+                    <td>${item.amount}đ</td>
+                    <td>${item.status}</td>
+                </tr>`;
+                historyList.innerHTML += row;
+            });
+        }
+
+        loadHistory();
+    </script>
+</body>
+</html>
