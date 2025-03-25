@@ -1,4 +1,4 @@
-/* Reset mặc định */
+/* ====== RESET MẶC ĐỊNH ====== */
 * {
     margin: 0;
     padding: 0;
@@ -7,15 +7,23 @@
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: #f8e71c; /* Màu vàng nhạt */
     text-align: center;
     padding: 20px;
 }
 
-h2 {
-    margin-bottom: 20px;
+/* ====== HEADER ====== */
+header {
+    background: #ffcc00; /* Màu vàng đậm */
+    color: white;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* ====== FORM CHUNG ====== */
 form {
     background: white;
     padding: 20px;
@@ -42,8 +50,8 @@ input, select {
 
 button {
     width: 100%;
-    background: #007bff;
-    color: white;
+    background: #ffcc00;
+    color: black;
     border: none;
     padding: 10px;
     font-size: 16px;
@@ -53,10 +61,45 @@ button {
 }
 
 button:hover {
-    background: #0056b3;
+    background: #e6b800;
 }
 
-/* Bảng lịch sử giao dịch */
+/* ====== HIỂU ỨNG THẺ CARD (GÓI NẠP) ====== */
+.goi-nap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* ====== BẢNG LỊCH SỬ GIAO DỊCH ====== */
 table {
     width: 100%;
     max-width: 600px;
@@ -75,17 +118,17 @@ th, td {
 }
 
 th {
-    background: #007bff;
-    color: white;
+    background: #ffcc00;
+    color: black;
 }
 
 td {
     text-align: center;
 }
 
-/* Link */
+/* ====== LINK ====== */
 a {
-    color: #007bff;
+    color: #ffcc00;
     text-decoration: none;
 }
 
